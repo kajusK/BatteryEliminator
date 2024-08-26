@@ -58,7 +58,15 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "duplicate_footprints|115500000|141500000|9f93ecc2-21f6-4472-93f2-9b5ea335ec62|3d1b1a2f-3312-4621-a29d-4af25639f92f",
+        "duplicate_footprints|140000000|141500000|6eac48d1-25eb-4fd4-8f49-a2f73ef060d9|3d1b1a2f-3312-4621-a29d-4af25639f92f",
+        "duplicate_footprints|140000000|90000000|504840d0-010f-4a95-bd9a-b7d49b0e54ba|3d1b1a2f-3312-4621-a29d-4af25639f92f",
+        "extra_footprint|115500000|141500000|9f93ecc2-21f6-4472-93f2-9b5ea335ec62|00000000-0000-0000-0000-000000000000",
+        "extra_footprint|115500000|90000000|3d1b1a2f-3312-4621-a29d-4af25639f92f|00000000-0000-0000-0000-000000000000",
+        "extra_footprint|140000000|141500000|6eac48d1-25eb-4fd4-8f49-a2f73ef060d9|00000000-0000-0000-0000-000000000000",
+        "extra_footprint|140000000|90000000|504840d0-010f-4a95-bd9a-b7d49b0e54ba|00000000-0000-0000-0000-000000000000"
+      ],
       "meta": {
         "version": 2
       },
@@ -494,7 +502,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "./",
-      "plot": "",
+      "plot": "gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
