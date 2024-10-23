@@ -7,7 +7,7 @@ contacts of the radio.
 ## Design constraints
 
 - Radio uses 2 cell Li-Ion battery used -> 7.4 V nominal working voltage
-- Radio current consumption: 1 A for Tx, 70 mA for Rx
+- Radio current consumption: 1 A for Tx, 70 mA for Rx per manual
 - Input voltage range 8-28 V of aircraft power bus (12 V nominal)
 - Good input voltage noise filtering is needed - spikes on engine startup, etc.
 
@@ -67,3 +67,10 @@ capacitor and a large capacitor with higher ESR to provide some dumping.
 The output of the switching regulator is separated from radio by a fuse
 and a TVS diode to protect the circuit from ESD when radio is not connected.
 
+## Testing
+
+- Measured at 13 V input voltage (usual value when engine is running in 12 V based aircraft power system)
+- Radio consumption pulses between 20 and 44 mA in Rx while battery saving is enabled, the coil makes annoying buzzing noise
+- With battery saving off -> 44 mA constant current, the coil makes very weak high pitch sound
+- With backlight on, consumption is 90 mA
+- When transmitting, the consumption is around 700 mA
