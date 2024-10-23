@@ -1,8 +1,11 @@
 # Battery eliminator for NavComm NC-55A
 
-The aim of this project is to eliminate battery from the NavComm NC-55A airband
+The aim of this project is to eliminate battery from the [NavComm NC-55A airband](https://navcomm.eu/en/air-band/15-handheld-air-band-radio-with-vor-and-bluetooth-5907662381407.html#/wersje_nc_55a-basic/battery_type-battery_li_po_2400mah)
 radio by providing a regulated voltage supply directly through the battery
 contacts of the radio.
+
+
+![eliminator](eliminator.jpg)
 
 ## Design constraints
 
@@ -11,7 +14,15 @@ contacts of the radio.
 - Input voltage range 8-28 V of aircraft power bus (12 V nominal)
 - Good input voltage noise filtering is needed - spikes on engine startup, etc.
 
-## Design
+## Mechanical design
+
+- The mechanical part (holder) of the project was designed in a way that it can be clicked to the radio back in similar way as the battery
+- The holder serves as a battery replacement and in the same time as a mounting point of the radio to the aircraft panel
+- A simple connector to accomodate 2 jacks needed by the radio (mic, headphones, PTT) is included in the design files
+- Design files can be found in [3d folder](./3d) or on my [Onshape profile](https://cad.onshape.com/documents/5d88d10385b6e47e38e9babd/w/7460efe50eb1ed31b91b954c/e/4510368ee41f3908bf5426d3?renderMode=0&uiState=67194a155a797301722a329e)
+
+
+## PCB Design
 
 ### Input protection
 
@@ -72,5 +83,5 @@ and a TVS diode to protect the circuit from ESD when radio is not connected.
 - Measured at 13 V input voltage (usual value when engine is running in 12 V based aircraft power system)
 - Radio consumption pulses between 20 and 44 mA in Rx while battery saving is enabled, the coil makes annoying buzzing noise
 - With battery saving off -> 44 mA constant current, the coil makes very weak high pitch sound
-- With backlight on, consumption is 90 mA
+- With backlight on, consumption is 90 mA, no audible noise from coil
 - When transmitting, the consumption is around 700 mA
